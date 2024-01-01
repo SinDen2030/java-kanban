@@ -1,16 +1,6 @@
 
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-A
-src/Progress.java,7\b\7b9a1d2370f6779996179b141be0588039211df0
-=
-src/Task.java,1\5\1563d9cc43d5cc4a5c559a91e0489b8331ce260c
-A
-src/EpicTask.java,b\f\bf090fd64075db68862158d0ddb389e1b1fcfedd
-@
-src/SubTask.java,f\c\fcfb69472622f272eb5d8f453e69584d0e529474
 F
 src/HomeWork/Main.java,7\7\77092a0ef2036fc22ef2c5edfe2888c6665c8b23
 F

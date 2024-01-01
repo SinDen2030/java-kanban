@@ -8,6 +8,10 @@ public class Task {
     protected final int id;
     protected Progress status;
 
+    public Progress getStatus() {
+        return status;
+    }
+
     public Task(String name, String description, int id) {
         this.name = name;
         this.description = description;
@@ -29,5 +33,16 @@ public class Task {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Task{name=" + name + ", description.length=" + description.length() + ", id=" + id +
+                ", status=" + status + "}";
     }
 }
