@@ -1,4 +1,6 @@
-package homework;
+package model;
+
+import homework.Progress;
 
 import java.util.Objects;
 

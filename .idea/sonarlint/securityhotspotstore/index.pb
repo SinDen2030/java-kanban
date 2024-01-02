@@ -23,3 +23,7 @@ J
 src/homework/EpicTask.java,2\3\23bef3e7b023e9936ce9cb2e7de2e0f0b6a841af
 M
 src/homework/TaskManager.java,6\6\668e2967ed5b841adda7fdeefb2f6d9cfd7bd332
+L
+src/manager/TaskManager.java,f\a\faa70362252a04b2ad35762a07b341f056f03658
+C
+src/model/Task.java,f\8\f832a384be168e161b98ea99b51d3c78b15a5a6b

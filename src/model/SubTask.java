@@ -1,4 +1,4 @@
-package homework;
+package model;
 
 public class SubTask extends Task {
     private final int idForEpic;

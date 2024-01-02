@@ -1,4 +1,9 @@
-package homework;
+package manager;
+
+import model.EpicTask;
+import homework.Progress;
+import model.SubTask;
+import model.Task;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,10 +40,10 @@ public class TaskManager {
 
     public void removeTask(Integer key) {
         Object obj = tasks.get(key);
-        if (obj instanceof homework.Task) {
+        if (obj instanceof Task) {
             task.remove(key);
         }
-        if (obj instanceof homework.EpicTask) {
+        if (obj instanceof EpicTask) {
             ArrayList<Integer> idSubTask = epicTasks.get(key).getListForIdSubTask();
             for (int id : idSubTask) {
                 subTasks.remove(id);
@@ -46,7 +51,7 @@ public class TaskManager {
             }
             epicTasks.remove(key);
         }
-        if (obj instanceof homework.SubTask) {
+        if (obj instanceof SubTask) {
             SubTask subTask = (SubTask) obj;
             int idForEpic = subTask.getIdForEpic();
             epicTasks.get(idForEpic).deleteIdSubTask(subTask.getId());
@@ -63,17 +68,17 @@ public class TaskManager {
     }
 
     public void addOrUpdateTask(Object obj) {
-        if (obj instanceof homework.Task) {
+        if (obj instanceof Task) {
             Task newTask = (Task) obj;
             task.put(newTask.getId(), newTask);
             tasks.putAll(task);
         }
-        if (obj instanceof homework.EpicTask) {
+        if (obj instanceof EpicTask) {
             EpicTask newEpicTask = (EpicTask) obj;
             epicTasks.put(newEpicTask.getId(), newEpicTask);
             tasks.putAll(epicTasks);
         }
-        if (obj instanceof homework.SubTask) {
+        if (obj instanceof SubTask) {
             SubTask newSubTask = (SubTask) obj;
             int idForEpic = newSubTask.getIdForEpic();
             ArrayList<Integer> listForId = epicTasks.get(idForEpic).getListForIdSubTask();
