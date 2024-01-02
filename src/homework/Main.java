@@ -1,9 +1,7 @@
 package homework;
 
 import manager.TaskManager;
-import model.EpicTask;
-import model.SubTask;
-import model.Task;
+import model.*;
 
 public class Main {
     public static void main(String[] args) {
