@@ -35,7 +35,7 @@ public class Main {
         newSubTask1.setStatus(Progress.NEW);
         taskManager.addOrUpdateTask(newSubTask);
         taskManager.addOrUpdateTask(newSubTask1);
-        newSubTask3.setStatus(Progress.IN_PROGRESS);
+        newSubTask3.setStatus(Progress.DONE);
         taskManager.addOrUpdateTask(newSubTask3);
 
         System.out.println("\n");
