@@ -2,6 +2,7 @@ package manager;
 
 import model.*;
 import homework.Progress;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -38,9 +39,7 @@ public class TaskManager {
 
     public void removeTask(Integer key) {
         HashMap<Integer, Task> allTasks = getAllTasks();
-
         Object obj = allTasks.get(key);
-
 
         if (obj instanceof SubTask) {
             SubTask subTask = (SubTask) obj;
@@ -100,7 +99,7 @@ public class TaskManager {
         ArrayList<Integer> idSubTask = epicTasks.get(idForEpic).getListForIdSubTask();
         int count = 0;
 
-        for (int id: idSubTask) {
+        for (int id : idSubTask) {
             if (subTasks.get(id).getStatus() == Progress.DONE) {
                 count++;
                 if (count == idSubTask.size()) {
@@ -111,7 +110,7 @@ public class TaskManager {
 
         count = 0;
 
-        for (int id: idSubTask) {
+        for (int id : idSubTask) {
             if (subTasks.get(id).getStatus() == Progress.NEW) {
                 count++;
                 if (count == idSubTask.size()) {
