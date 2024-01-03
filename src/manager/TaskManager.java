@@ -38,14 +38,16 @@ public class TaskManager {
 
     public void removeTask(Integer key) {
         HashMap<Integer, Task> allTasks = getAllTasks();
+
         Object obj = allTasks.get(key);
+
 
         if (obj instanceof SubTask) {
             SubTask subTask = (SubTask) obj;
             int idForEpic = subTask.getIdForEpic();
             epicTasks.get(idForEpic).deleteIdSubTask(subTask.getId());
             ArrayList<Integer> listForId = epicTasks.get(idForEpic).getListForIdSubTask();
-            if (listForId.isEmpty()) {
+            if (listForId.size() == 0) {
                 epicTasks.get(idForEpic).setStatus(Progress.NEW);
             } else {
                 epicTasks.get(idForEpic).deleteIdSubTask(subTask.getId());
@@ -58,6 +60,7 @@ public class TaskManager {
             ArrayList<Integer> idSubTask = epicTasks.get(key).getListForIdSubTask();
             for (int id : idSubTask) {
                 subTasks.remove(id);
+                allTasks.remove(id);
             }
             epicTasks.remove(key);
             return;
@@ -84,7 +87,6 @@ public class TaskManager {
             EpicTask newEpicTask = (EpicTask) obj;
             epicTasks.put(newEpicTask.getId(), newEpicTask);
             return;
-
         }
         if (obj instanceof Task) {
             Task newTask = (Task) obj;
@@ -92,13 +94,13 @@ public class TaskManager {
         }
     }
 
-    private void updateStatus(SubTask subTask) {
+    public void updateStatus(SubTask subTask) {
         int idForEpic = subTask.getIdForEpic();
         Progress progress = Progress.IN_PROGRESS;
         ArrayList<Integer> idSubTask = epicTasks.get(idForEpic).getListForIdSubTask();
         int count = 0;
 
-        for (int id : idSubTask) {
+        for (int id: idSubTask) {
             if (subTasks.get(id).getStatus() == Progress.DONE) {
                 count++;
                 if (count == idSubTask.size()) {
@@ -109,7 +111,7 @@ public class TaskManager {
 
         count = 0;
 
-        for (int id : idSubTask) {
+        for (int id: idSubTask) {
             if (subTasks.get(id).getStatus() == Progress.NEW) {
                 count++;
                 if (count == idSubTask.size()) {
