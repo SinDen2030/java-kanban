@@ -1,4 +1,4 @@
-package homework;
+package model;
 
 public enum Progress {
     NEW,
