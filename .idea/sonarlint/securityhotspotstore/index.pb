@@ -27,3 +27,5 @@ L
 src/manager/TaskManager.java,f\a\faa70362252a04b2ad35762a07b341f056f03658
 C
 src/model/Task.java,f\8\f832a384be168e161b98ea99b51d3c78b15a5a6b
+F
+src/model/SubTask.java,c\0\c008752d2a6be89ccc101ce1997908302fafe25f

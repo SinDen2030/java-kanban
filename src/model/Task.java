@@ -1,7 +1,6 @@
 package model;
 
 import homework.Progress;
-
 import java.util.Objects;
 
 public class Task {

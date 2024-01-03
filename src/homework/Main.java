@@ -1,13 +1,11 @@
 package homework;
 
 import manager.TaskManager;
-import model.EpicTask;
-import model.SubTask;
-import model.Task;
+import model.*;
 
 public class Main {
     public static void main(String[] args) {
-        //Всё что находится далее, используется для демонстрации работоспособности
+        //Всё что находится далее, используется для демонстрации работоспособности проекта
         TaskManager taskManager = new TaskManager();
         Task newTask = new Task("Задача1", "Test", ++taskManager.count);
         Task newTask1 = new Task("Задача2", "Test", ++taskManager.count);
@@ -37,7 +35,7 @@ public class Main {
         newSubTask1.setStatus(Progress.NEW);
         taskManager.addOrUpdateTask(newSubTask);
         taskManager.addOrUpdateTask(newSubTask1);
-        newSubTask3.setStatus(Progress.IN_PROGRESS);
+        newSubTask3.setStatus(Progress.DONE);
         taskManager.addOrUpdateTask(newSubTask3);
 
         System.out.println("\n");
@@ -45,13 +43,19 @@ public class Main {
         for (Object task : taskManager.getAllTasks().values()) {
             System.out.println(task);
         }
-
-        taskManager.removeTask(1);
-        taskManager.removeTask(6);
-        taskManager.removeTask(4);
-
         System.out.println("\n");
 
+        System.out.println(taskManager.getAllTasks());
+
+
+        taskManager.removeTask(1);
+
+        taskManager.removeTask(6);
+
+        taskManager.removeTask(4);
+
+
+        System.out.println("\n");
         for (Object task : taskManager.getAllTasks().values()) {
             System.out.println(task);
         }
