@@ -1,11 +1,0 @@
-
-
-java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(êœûÎýÿÿÿÿ8øÍˆ¸Ì1
-s
-java:S1104"QMake count a static final constant or non-public and provide accessors if needed.(§™…×ýÿÿÿÿ8ùÍˆ¸Ì1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œ«èl8ÂÏˆ¸Ì1
-P
-java:S2864"4Iterate over the "entrySet" instead of the "keySet".(šßÙ8ÇÏˆ¸Ì1
-`
-java:S11558">Use isEmpty() to check whether the collection is empty or not.(±Óà‘þÿÿÿÿ8‡½ž¸Ì1
